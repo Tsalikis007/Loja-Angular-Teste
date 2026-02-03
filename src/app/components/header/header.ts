@@ -1,11 +1,21 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-header',
-  imports: [],
+  standalone: true,
+  imports: [CommonModule],
   templateUrl: './header.html',
-  styleUrl: './header.css',
+  styles: [
+    
+  ]
 })
 export class Header {
+  menuOpen = false;
+  cartCount = 0;
 
+  toggleMenu() {
+    this.menuOpen = !this.menuOpen;
+  }
 }
+
