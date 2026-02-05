@@ -1,1 +1,77 @@
-/* You can add global styles to this file, and also import other style files */
+/* Global styles with beautiful background */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  background: linear-gradient(135deg, #00ff95 0%, #beff55 50%, #00ff95 100%);
+  background-size: 400% 400%;
+  background-attachment: fixed;
+  animation: gradientShift 15s ease infinite;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+}
+
+/* Animated gradient background */
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Subtle pattern overlay */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 35px,
+      rgba(255, 255, 255, 0.02) 35px,
+      rgba(255, 255, 255, 0.02) 70px
+    );
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Floating shapes background */
+body::after {
+  content: '';
+  position: fixed;
+  top: -50%;
+  right: -10%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+  background-size: 50px 50px;
+  pointer-events: none;
+  z-index: 0;
+  animation: float 20s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-50px) rotate(180deg); }
+}
+
+app-root {
+  position: relative;
+  z-index: 1;
+  display: block;
+}

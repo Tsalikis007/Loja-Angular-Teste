@@ -1,4 +1,52 @@
 <app-header></app-header>
+
 <main class="container-main">
-  <app-produtos></app-produtos>
+
+  <!-- Hero / destaque -->
+  <section class="hero">
+    <div class="hero-inner">
+      <h1>Bem-vindo à Loja</h1>
+      <p>Encontre produtos selecionados com ofertas especiais e novidades.</p>
+      <a class="cta" href="#produtos">Ver produtos</a>
+    </div>
+  </section>
+
+  <!-- Informativos em cards -->
+  <section class="info-cards">
+    <div class="container-cards">
+      <article class="info-card">
+        <h3>Frete grátis</h3>
+        <p>Em compras acima de R$ 150 — rápido e seguro.</p>
+      </article>
+      <article class="info-card">
+        <h3>Suporte 24/7</h3>
+        <p>Equipe pronta para te ajudar sempre que precisar.</p>
+      </article>
+      <article class="info-card">
+        <h3>Novidades semanais</h3>
+        <p>Produtos selecionados com descontos exclusivos.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- Scroller dinâmico de novidades -->
+  <app-scroller></app-scroller>
+
+  <!-- Produtos (grid) -->
+  <section id="produtos" class="produtos-section">
+    <app-produtos></app-produtos>
+  </section>
+
+  <!-- Footer simples -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p>&copy; 2026 Loja — Todos os direitos reservados.</p>
+      <nav class="footer-links">
+        <a href="#">Política</a>
+        <a href="#">Privacidade</a>
+        <a href="#">Contato</a>
+      </nav>
+    </div>
+  </footer>
+
 </main>
