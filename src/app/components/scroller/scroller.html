@@ -3,12 +3,12 @@
   <div class="scroller-wrapper">
     <div class="scroller" aria-label="Novidades - rolagem horizontal">
       <div class="scroller-card" *ngFor="let p of produtos">
-        <img [src]="'/images/' + p.imagem" [alt]="p.nome" onerror="this.onerror=null;this.src='/images/placeholder.svg'" />
+        <img [src]="'/' + p.imagem" [alt]="p.nome" onerror="this.onerror=null;this.src='/placeholder.svg'" />
         <h4>{{ p.nome }}</h4>
         <p>R$ {{ p.preco }}</p>
       </div>
       <div class="scroller-card" *ngFor="let p of produtos">
-        <img [src]="'/images/' + p.imagem" [alt]="p.nome" onerror="this.onerror=null;this.src='/images/placeholder.svg'" />
+        <img [src]="'/' + p.imagem" [alt]="p.nome" onerror="this.onerror=null;this.src='/placeholder.svg'" />
         <h4>{{ p.nome }}</h4>
         <p>R$ {{ p.preco }}</p>
       </div>
